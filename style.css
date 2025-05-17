@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.game-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 230, 230, 0.95);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.game-screen h1, .game-screen h2 {
+    color: #333;
+}
+
+.game-screen .instructions {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.game-screen .instructions ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.game-screen .instructions li {
+    margin-bottom: 8px;
+}
+
+#controls button, #post-game-controls button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#controls button:hover, #post-game-controls button:hover {
+    background-color: #45a049;
+}
+
+#game-elements {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameCanvas {
+    border: 2px solid black;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+#player-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    text-align: left;
+}
+
+#player-info p {
+    margin: 5px 0;
+}
+
+#score-display {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    min-width: 200px;
+    text-align: left;
+}
+
+#score-display p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#final-scores p {
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+#winner-announcement {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d35400;
+    margin: 15px 0;
+}
+
+#clickable-player-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.player-action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+#player1-action-button:hover {
+    background-color: darkred !important;
+}
+
+#player2-action-button:hover {
+    background-color: darkgreen !important;
+}
+
+#player3-action-button:hover {
+    background-color: darkblue !important;
+} 

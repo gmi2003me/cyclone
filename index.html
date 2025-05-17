@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclone Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pre-game-screen" class="game-screen">
+        <h1>Cyclone Arcade Game</h1>
+        <div class="instructions">
+            <h2>Welcome!</h2>
+            <p>Get ready to test your timing and reflexes in this web-based version of the classic arcade game, Cyclone!</p>
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Lights will circle around the game board.</li>
+                <li>Each light has a point value. Higher points mean a smaller scoring window!</li>
+                <li><strong>Player 1 (Red):</strong> Press Left Shift or the Red Button.</li>
+                <li><strong>Player 2 (Green):</strong> Press Space Bar or the Green Button.</li>
+                <li><strong>Player 3 (Blue):</strong> Press Enter/Return or the Blue Button.</li>
+                <li>Press your button when the moving light is over a point light you want to hit.</li>
+                <li>You must press within the specific time window for that light to score. The window is shorter for higher-value lights.</li>
+                <li>Each player has 10 attempts. Highest score wins!</li>
+            </ul>
+        </div>
+        <div id="controls">
+            <button id="start-1-player">Start 1 Player Game</button>
+            <button id="start-2-player">Start 2 Player Game</button>
+            <button id="start-3-player">Start 3 Player Game</button>
+        </div>
+    </div>
+
+    <div id="game-elements" style="display: none;"> <!-- Wrapper for actual game content -->
+        <canvas id="gameCanvas"></canvas>
+        <div id="clickable-player-buttons">
+            <button id="player1-action-button" class="player-action-button" style="background-color: red; color: white;">Press</button>
+            <button id="player2-action-button" class="player-action-button" style="background-color: green; color: white;">Press</button>
+            <button id="player3-action-button" class="player-action-button" style="background-color: blue; color: white;">Press</button>
+        </div>
+        <div id="player-info">
+            <p>Player 1: Left Shift</p>
+            <p>Player 2: Space Bar</p>
+            <p>Player 3: Return Key</p>
+        </div>
+        <div id="score-display">
+            <!-- Scores will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div id="post-game-screen" class="game-screen" style="display: none;">
+        <h2>Game Over!</h2>
+        <div id="final-scores">
+            <!-- Final scores will be populated here -->
+        </div>
+        <p id="winner-announcement"></p>
+        <div id="post-game-controls">
+            <!-- Start buttons will be cloned here -->
+            <button id="restart-1-player">Start 1 Player Game</button>
+            <button id="restart-2-player">Start 2 Player Game</button>
+            <button id="restart-3-player">Start 3 Player Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
